@@ -30,17 +30,17 @@ function Change(inobj)
         console.log("we are in the correct Diluc case, POG");
         break;
 
-        case "Bennett":
-        document.getElementById("ESplaceholder1").src="pics/placeholder.webp";
-        document.getElementById("ESplaceholder2").src="pics/placeholder.webp";
-        document.getElementById("ESplaceholder3").src="pics/placeholder.webp";
-        document.getElementById("BDplaceholder").src="pics/placeholder.webp";
-        document.getElementById("WDplaceholder").src="pics/placeholder.webp";
-        document.getElementById("MDplaceholder1").src="pics/placeholder.webp";
-        document.getElementById("MDplaceholder2").src="pics/placeholder.webp";
-        document.getElementById("MDplaceholder3").src="pics/placeholder.webp";
-        document.getElementById("XPplaceholder").src="pics/placeholder.webp";
-        document.getElementById("Moraplaceholder").src="pics/placeholder.webp";
+        case "Sucrose":
+        document.getElementById("ESplaceholder1").src="pics/Sucrose/tier1anemo.webp";
+        document.getElementById("ESplaceholder2").src="pics/Sucrose/tier2anemo.webp";
+        document.getElementById("ESplaceholder3").src="pics/Sucrose/tier3anemo.webp";
+        document.getElementById("BDplaceholder").src="pics/Sucrose/hurricaneseed.webp";
+        document.getElementById("WDplaceholder").src="pics/Sucrose/aster.webp";
+        document.getElementById("MDplaceholder1").src="pics/Sucrose/tier1nectar.webp";
+        document.getElementById("MDplaceholder2").src="pics/Sucrose/tier2nectar.webp";
+        document.getElementById("MDplaceholder3").src="pics/Sucrose/tier3nectar.webp";
+        document.getElementById("XPplaceholder").src="pics/XPbook.webp";
+        document.getElementById("Moraplaceholder").src="pics/Mora.webp";
 
         break;
         case "Zhongli":
@@ -57,7 +57,7 @@ function Change(inobj)
         console.log("we are in the correct Zhongli case, POG");    
 
         break;
-        case "Jean":
+        /* case "Jean":
         document.getElementById("ESplaceholder1").src="pics/placeholder.webp";
         document.getElementById("ESplaceholder2").src="pics/placeholder.webp";
         document.getElementById("ESplaceholder3").src="pics/placeholder.webp";
@@ -68,7 +68,7 @@ function Change(inobj)
         document.getElementById("MDplaceholder3").src="pics/placeholder.webp";
         document.getElementById("XPplaceholder").src="pics/placeholder.webp";
         document.getElementById("Moraplaceholder").src="pics/placeholder.webp";
-
+ */
     }
 }
 

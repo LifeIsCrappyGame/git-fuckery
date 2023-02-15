@@ -7,22 +7,24 @@
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
+    <img src="pics/background.png" id="background" alt="background">
     <h1>Enhancement Calculator</h1>
     <script src="calculator.js"></script>
 
     <select id="PickChar" onchange="Change(this.value);">
     <option value="default">Choose</option>
-    <option value="Jean">Jean</option>
+    <!-- <option value="Jean">Jean</option> -->
     <option value="Diluc">Diluc</option>
-    <option value="Bennett">Bennett</option>
+    <option value="Sucrose">Sucrose</option>
+    <!-- <option value="Bennett">Bennett</option> -->
     <option value="Zhongli">Zhongli</option>
-    <option value="Ningguang">Ningguang</option>
+    <!-- <option value="Ningguang">Ningguang</option>
     <option value="Xiao">Xiao</option>
     <option value="Kamisato Ayaka">Kamisato Ayaka</option>
     <option value="Kamisato Ayato">Kamisato Ayato</option>
     <option value="Alhaitham">Alhaitham</option>
     <option value="Cyno">Cyno</option>
-    <option value="Collei">Collei</option>
+    <option value="Collei">Collei</option> -->
 </select>
 <br></br>
 <h2>Are you building this character?</h2>
@@ -31,6 +33,11 @@
 <button onclick="BuildSlot1();">Save into Slot 1</button>
 <button onclick="BuildSlot2();">Save into Slot 2</button>
 <button onclick="BuildSlot3();">Save into Slot 3</button>
+<br></br>
+<button onclick="DeleteSlot1();">Delete Slot 1</button>
+<button onclick="DeleteSlot2();">Delete Slot 2</button>
+<button onclick="DeleteSlot3();">Delete Slot 3</button>
+
 <!-- <button onclick="ViewList();">View</button> -->
 
 <br></br>
@@ -114,7 +121,7 @@
 
 </div>
 
-<div class="slot3" id="slot2">
+<div class="slot3" id="slot3">
 <h2>Slot 3</h2>
 <img src="pics/placeholder.webp" id="picslot3" alt="placeholder">
 
