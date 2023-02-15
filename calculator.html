@@ -24,22 +24,26 @@
     <option value="Cyno">Cyno</option>
     <option value="Collei">Collei</option>
 </select>
+<br></br>
+<h2>Are you building this character?</h2>
+
+
+<button onclick="BuildSlot1();">Save into Slot 1</button>
+<button onclick="BuildSlot2();">Save into Slot 2</button>
+<button onclick="BuildSlot3();">Save into Slot 3</button>
+<!-- <button onclick="ViewList();">View</button> -->
 
 <br></br>
-<script src = "talentreminder.js"></script>
-<button onclick="Build()">Build a character?</button>
 
-<br></br>
-
-
+<h2>Ascension Levels</h2>
 <script src="NumbersPog.js"></script>
 
-<input type="checkbox" id="1" onchange='AscendLevel1();'>
-<input type="checkbox" id="2" onchange='AscendLevel2();'>
-<input type="checkbox" id="3" onchange='AscendLevel3();'>
-<input type="checkbox" id="4" onchange='AscendLevel4();'>
-<input type="checkbox" id="5" onchange='AscendLevel5();'>
-<input type="checkbox" id="6" onchange='AscendLevel6();'>
+<label><input type="checkbox" id="1" onchange='AscendLevel1();'>1*</label>
+<label class="checkbox"><input type="checkbox" id="2" onchange='AscendLevel2();'>2*</label>
+<label class="checkbox"><input type="checkbox" id="3" onchange='AscendLevel3();'>3*</label>
+<label class="checkbox"><input type="checkbox" id="4" onchange='AscendLevel4();'>4*</label>
+<label class="checkbox"><input type="checkbox" id="5" onchange='AscendLevel5();'>5*</label>
+<label class="checkbox"><input type="checkbox" id="6" onchange='AscendLevel6();'>6*</label>
 
 
 <!--
@@ -94,13 +98,28 @@
 <br></br>
 <br></br>
 
-<h1>Characters to level up</h1>
-<div class="talentreminder">
 
+
+<h1>Characters to level up</h1>
+<div id="slot1" class="slot1">
+<h2>Slot 1</h2>
+<img src="pics/placeholder.webp" id="picslot1" alt="placeholder">
 
 
 </div>
 
+<div class="slot2" id="slot2">
+<h2>Slot 2</h2>
+<img src="pics/placeholder.webp" id="picslot2" alt="placeholder">
 
+</div>
+
+<div class="slot3" id="slot2">
+<h2>Slot 3</h2>
+<img src="pics/placeholder.webp" id="picslot3" alt="placeholder">
+
+</div>
 
 </body>
+
+<script src = "talentreminder.js"></script>

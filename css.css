@@ -50,6 +50,11 @@ img
     float:none;
 }
 
+.checkbox
+{
+    padding-left: 35px;
+}
+
 div
 {
     width: 120px;
@@ -57,10 +62,20 @@ div
     float: left;
 }
 
-div.talentreminder
+div.slot1
 {
-    float: initial;
-    width: auto;
+    float: left;
+    width: 400px;
+}
+div.slot2
+{
+    float: left;
+    width: 400px;
+}
+div.slot3
+{
+    float: left;
+    width: 400px;
 }
 /*.EScaption
 {
