@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enhancement Calculator</title>
     <link rel="stylesheet" href="css.css">
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 </head>
 <body>
     <img src="pics/background.png" id="background" alt="background">
@@ -31,13 +30,13 @@
 <h2>Are you building this character?</h2>
 
 
-<button onclick="buildSlot(1);">Save into Slot 1</button>
-<button onclick="buildSlot(2);">Save into Slot 2</button>
-<button onclick="buildSlot(3);">Save into Slot 3</button>
+<button onclick="BuildSlot1();">Save into Slot 1</button>
+<button onclick="BuildSlot2();">Save into Slot 2</button>
+<button onclick="BuildSlot3();">Save into Slot 3</button>
 <br></br>
-<button onclick="deleteSlot(1);">Delete Slot 1</button>
-<button onclick="deleteSlot(2);">Delete Slot 2</button>
-<button onclick="deleteSlot(3);">Delete Slot 3</button>
+<button onclick="DeleteSlot1();">Delete Slot 1</button>
+<button onclick="DeleteSlot2();">Delete Slot 2</button>
+<button onclick="DeleteSlot3();">Delete Slot 3</button>
 
 <!-- <button onclick="ViewList();">View</button> -->
 
@@ -99,18 +98,12 @@
 <div class="Mora">
 <img src="pics/placeholder.webp" id="Moraplaceholder" alt="placeholder"> 
 <input type="number" id="MoraCaption" value="0" readonly>   
-
 </div>
 <br></br>
 <br></br>
 <br></br>
 <br></br>
 <br></br>
-<br></br>
-<br></br>
-
-
-
 
 
 
@@ -134,8 +127,192 @@
 
 </div>
 
-
-
 </body>
 
-<script src = "talentreminder.js"></script>
+<script>
+
+
+
+
+
+if (localStorage.getItem("1") === null)
+{
+    console.log("nothing in slot1");
+}
+else
+{
+    
+    
+    switch (localStorage.getItem("1"))
+    {
+    case "Zhongli":
+        document.getElementById("picslot1").src="pics/Zhongli/zhongliicon.webp";
+        document.getElementById("slot1").innerHTML += "<br></br>Zhongli"; 
+
+        
+        
+    break;
+
+    case "Diluc":
+
+        document.getElementById("picslot1").src="pics/Diluc/dilucicon.webp";
+        document.getElementById("slot1").innerHTML += "<br></br>Diluc"; 
+
+        
+
+    break;
+
+    case "Sucrose":
+
+    document.getElementById("picslot1").src="pics/Sucrose/sucroseicon.webp";
+    document.getElementById("slot1").innerHTML += "<br></br>Sucrose"; 
+
+    
+
+    break;
+
+
+    }
+
+}
+
+if (localStorage.getItem("2") === null)
+{
+    console.log("nothing in slot2");
+}
+else
+{
+    var date = new Date();
+    var day = date.getDay();
+    
+    switch (localStorage.getItem("2"))
+    {
+    case "Zhongli":
+        document.getElementById("picslot2").src="pics/Zhongli/zhongliicon.webp";
+        document.getElementById("slot2").innerHTML += "<br></br>Zhongli"; 
+
+       
+    break;
+
+    case "Diluc":
+
+        document.getElementById("picslot2").src="pics/Diluc/dilucicon.webp";
+        document.getElementById("slot2").innerHTML += "<br></br>Diluc"; 
+
+       
+
+    break;
+
+    case "Sucrose":
+
+    document.getElementById("picslot2").src="pics/Sucrose/sucroseicon.webp";
+    document.getElementById("slot2").innerHTML += "<br></br>Sucrose"; 
+
+    
+
+    break;
+
+
+    }
+
+}
+
+    if (localStorage.getItem("3") === null)
+{
+    console.log("nothing in slot1");
+}
+else
+{
+   
+    switch (localStorage.getItem("3"))
+    {
+    case "Zhongli":
+        document.getElementById("picslot3").src="pics/Zhongli/zhongliicon.webp";
+        document.getElementById("slot3").innerHTML += "<br></br>Zhongli"; 
+
+      
+        
+    break;
+
+    case "Diluc":
+
+        document.getElementById("picslot3").src="pics/Diluc/dilucicon.webp";
+        document.getElementById("slot3").innerHTML += "<br></br>Diluc"; 
+
+
+    break;
+
+    case "Sucrose":
+
+    document.getElementById("picslot3").src="pics/Sucrose/sucroseicon.webp";
+    document.getElementById("slot3").innerHTML += "<br></br>Sucrose"; 
+
+  
+
+    break;
+
+
+    }
+}
+
+function BuildSlot1()
+{
+    alert("Building " + document.getElementById("PickChar").value);
+    var char = document.getElementById("PickChar").value;
+    console.log(char);
+    localStorage.setItem("1", char);
+    location.reload();
+    
+    
+}
+
+function BuildSlot2()
+{
+    alert("Building " + document.getElementById("PickChar").value);
+    var char = document.getElementById("PickChar").value;
+    console.log(char);
+    localStorage.setItem("2", char);
+    location.reload();
+
+    
+    
+}
+
+function BuildSlot3()
+{
+    alert("Building " + document.getElementById("PickChar").value);
+    var char = document.getElementById("PickChar").value;
+    console.log(char);
+    localStorage.setItem("3", char);
+    location.reload();
+
+    
+}
+
+function DeleteSlot1()
+{
+window.localStorage.removeItem("1");
+location.reload();
+};
+
+function DeleteSlot2()
+{
+window.localStorage.removeItem("2");
+location.reload();
+};
+
+function DeleteSlot3()
+{
+window.localStorage.removeItem("3");
+location.reload();
+};
+
+
+
+
+
+
+
+
+
+</script>
