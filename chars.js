@@ -62,9 +62,6 @@ function DeleteList()
 window.localStorage.clear();
 };
 
-
-
-
 function ShowList()
 {
     var ModListOfChars = document.getElementById("ListOfChars");

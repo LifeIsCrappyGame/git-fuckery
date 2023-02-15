@@ -1,0 +1,108 @@
+/*copypasted shit*/
+
+/*
+div.item {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+}
+img {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+}
+.caption {
+    display: block;
+}
+*/
+
+/*caption
+{
+    display: block;
+}
+*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]
+{
+    display: block;
+    width: 60px;
+    -moz-appearance: textfield;
+    margin-left: 15px;
+}
+
+.BDcaption
+{
+    display: block;
+}
+
+
+img
+{
+    width: 100px;
+    height: auto;
+    float:none;
+}
+
+div
+{
+    width: 120px;
+    height: auto;
+    float: left;
+}
+
+div.talentreminder
+{
+    float: initial;
+    width: auto;
+}
+/*.EScaption
+{
+    display: block;
+}
+*/
+
+/*.ElementStone
+{
+    width: 120px;
+    height: auto;
+    float: left;
+}
+
+.BossDrop
+{
+    float:left;
+    width: 120px;
+}
+
+.WorldDrop
+{
+    float:left;
+    width: 120px;
+}
+
+.MonsterDrop
+{
+    float:left;
+    width: 120px;
+}
+
+.XPbooks
+{
+    float:left;
+    width: 120px;
+}
+
+.Mora
+{
+    float:left;
+    width: 120px;
+}*/
+
+/* codink */
