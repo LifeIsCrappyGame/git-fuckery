@@ -1,12 +1,71 @@
+var date = new Date();
+var day = date.getDay();
 
+class Character {
+    constructor(name, weektype) {
+      this.name = name;
+      this.weektype = weektype;
+    }
+
+
+    
+    handleZhongli() 
+    {
+      
+        picSlot.src = "pics/Zhongli/zhongliicon.webp";
+        slot.innerHTML += "<br></br>" + this.name;
+        if (day == 3 || day == 6 || day == 0)
+          {
+            slot.innerHTML += DomainOpen;
+          }
+          else
+          {
+            slot.innerHTML += this.weektype;
+
+          }
+    }
+
+
+    handleSucrose()
+    {
+        picSlot.src = "pics/Sucrose/sucroseicon.webp";
+        slot.innerHTML += "<br></br>" + this.name;
+        if (day == 1 || day == 4 || day == 0)
+          {
+            slot.innerHTML += DomainOpen;
+          }
+          else
+          {
+            slot.innerHTML += this.weektype;
+          }
+    }
+
+  handleDiluc()
+    {
+        picSlot.src = "pics/Diluc/dilucicon.webp";
+        slot.innerHTML += "<br></br>" + this.name;
+        if (day == 2 || day == 5 || day == 0)
+          {
+            slot.innerHTML += DomainOpen;
+          }
+          else
+          {
+            slot.innerHTML += this.weektype;
+    }
+  }
+}
+
+
+const Sucrose = new Character("Sucrose", "<br></br>Closed today - Opens on Monday, Thursday, Sunday");
+const Diluc = new Character("Diluc", "<br></br>Closed today - Opens on Tuesday, Friday, Sunday");
+const Zhongli = new Character("Zhongli", "<br></br>Closed today - Opens on Wednesday, Saturday, Sunday");
+const DomainOpen = "<br></br><mark>Domain OPEN</mark>";
 
 function buildSlot(slotNum) {
     var char = document.getElementById("PickChar").value;
-    alert("Building " + char);
     localStorage.setItem(slotNum, char);
     location.reload();
-    //$('#slot1').load('calculator.html');
-    Change(inobj);
+  
   }
   
 
@@ -20,45 +79,22 @@ function buildSlot(slotNum) {
     var slot = document.getElementById("slot" + i);
     var picSlot = document.getElementById("picslot" + i);
     var charName = localStorage.getItem(i);
-    var date = new Date();
-    var day = date.getDay();
     if (charName) {
       switch (charName) {
         case "Zhongli":
-          picSlot.src = "pics/Zhongli/zhongliicon.webp";
-          slot.innerHTML += "<br></br>Zhongli";
-          if (day == 3 || day == 6 || day == 0)
-          {
-            slot.innerHTML += "<br></br><mark>Domain OPEN</mark>";
-          }
-          else
-          {
-            slot.innerHTML += "<br></br>Closed today - Opens on Wednesday, Saturday, Sunday";
-          }
+          
+            Zhongli.handleZhongli();
+
           break;
-        case "Diluc":
-          picSlot.src = "pics/Diluc/dilucicon.webp";
-          slot.innerHTML += "<br></br>Diluc";
-          if (day == 2 || day == 5 || day == 0)
-        {
-            slot.innerHTML += "<br></br><mark>Domain OPEN</mark>";
-        }
-        else
-        {
-            slot.innerHTML += "<br></br>Closed today - Opens on Tuesday, Friday, Sunday";
-        }
+        
+          case "Diluc":
+
+            Diluc.handleDiluc();
+
           break;
         case "Sucrose":
-          picSlot.src = "pics/Sucrose/sucroseicon.webp";
-          slot.innerHTML += "<br></br>Sucrose";
-          if (day == 1 || day == 4 || day == 0)
-        {
-            slot.innerHTML += "<br></br><mark>Domain OPEN</mark>";
-        }
-        else
-        {
-            slot.innerHTML += "<br></br>Closed today - Opens on Monday, Thursday, Sunday";
-        }
+
+            Sucrose.handleSucrose();
 
           break;
       }
@@ -73,7 +109,6 @@ function buildSlot(slotNum) {
 
 function AscendLevel1()
 {
-    let ModESCaption1 = document.getElementById('ESCaption1').valueAsNumber;
     let ModWDCaption = document.getElementById('WDCaption').valueAsNumber;
     let ModMDCaption1 = document.getElementById('MDCaption1').valueAsNumber;
     let ModXPCaption = document.getElementById('XPCaption').valueAsNumber;
@@ -82,11 +117,7 @@ function AscendLevel1()
 
     if(document.getElementById("1").checked == true)
     {
-        /*console.log("first star works");
-        console.log(ModESCaption1);
-        ModESCaption1 = ModESCaption1 + 50;
-        console.log(ModESCaption1);
-        document.getElementById("ESCaption1").value = ModESCaption1; */
+       
 
         ModWDCaption = ModWDCaption + 3;
         document.getElementById("WDCaption").value = ModWDCaption;
@@ -103,11 +134,7 @@ function AscendLevel1()
     }
     else if (document.getElementById("1").checked === false)
     {
-        /*console.log("shits fucked");
-        console.log(ModESCaption1);
-        ModESCaption1 = ModESCaption1 - 50;
-        console.log(ModESCaption1);
-        document.getElementById("ESCaption1").value = ModESCaption1;*/
+    
 
         ModWDCaption = ModWDCaption - 3;
         document.getElementById("WDCaption").value = ModWDCaption;
@@ -410,18 +437,7 @@ function Change(inobj)
         console.log("we are in the correct Zhongli case, POG");    
 
         break;
-        /* case "Jean":
-        document.getElementById("ESplaceholder1").src="pics/placeholder.webp";
-        document.getElementById("ESplaceholder2").src="pics/placeholder.webp";
-        document.getElementById("ESplaceholder3").src="pics/placeholder.webp";
-        document.getElementById("BDplaceholder").src="pics/placeholder.webp";
-        document.getElementById("WDplaceholder").src="pics/placeholder.webp";
-        document.getElementById("MDplaceholder1").src="pics/placeholder.webp";
-        document.getElementById("MDplaceholder2").src="pics/placeholder.webp";
-        document.getElementById("MDplaceholder3").src="pics/placeholder.webp";
-        document.getElementById("XPplaceholder").src="pics/placeholder.webp";
-        document.getElementById("Moraplaceholder").src="pics/placeholder.webp";
- */
+    
     }
 }
 
